@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class NumberInput extends StatelessWidget {
-  final RxInt rxValue;
+  final int value;
   final Function(int) onChanged;
   final int? min;
   final int? max;
 
   const NumberInput(
       {super.key,
-      required this.rxValue,
+      required this.value,
       required this.onChanged,
       this.min,
       this.max});
@@ -20,11 +19,17 @@ class NumberInput extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         ElevatedButton(
-            onPressed: () => {onChanged(rxValue.value - 1)},
+            onPressed: () {
+              if (min != null && value - 1 < min!) return;
+              onChanged(value - 1);
+            },
             child: const Text("-")),
-        Obx(() => Text(rxValue.value.toString())),
+        Text(value.toString()),
         ElevatedButton(
-            onPressed: () => {onChanged(rxValue.value + 1)},
+            onPressed: () {
+              if (max != null && value + 1 > max!) return;
+              onChanged(value + 1);
+            },
             child: const Text("+"))
       ],
     );
