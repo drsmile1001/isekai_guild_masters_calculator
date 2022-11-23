@@ -8,7 +8,7 @@
 PRODUCT_NAME = isekai_guild_masters_calculator
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.isekaiGuildMastersCalculator
+PRODUCT_BUNDLE_IDENTIFIER = work.drsmile.isekaiGuildMastersCalculator
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2022 com.example. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2022 work.drsmile. All rights reserved.

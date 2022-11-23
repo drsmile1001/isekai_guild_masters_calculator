@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.isekai_guild_masters_calculator">
+    package="work.drsmile.isekai_guild_masters_calculator">
    <application
-        android:label="isekai_guild_masters_calculator"
+        android:label="異世界公會長計算機"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
